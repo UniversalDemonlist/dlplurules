@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Demonlist</title>
+  <link rel="icon" href="/ne.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<button id="theme-toggle">Toggle Theme</button>
+
+<div class="tabs">
+  <img src="ne.png" class="tabs-logo">
+
+  <button class="tab-btn active" data-tab="home">Home</button>
+  <button class="tab-btn" data-tab="demonlist">Demonlist</button>
+  <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+ <a
+   class="tab-btn server-btn"
+   href="https://discord.gg/qeTcKqMrYF"
+   target="_blank"
+   rel="noopener noreferrer"
+ >
+   Server
+ </a>
+<button class="tab-btn" data-tab="staff">Staff</button>
+<button class="tab-btn" data-tab="rules">Rules</button>
+</div>
+
+<div id="home" class="tab-content active">
+
+  <div class="home-center">
+
+    <h1 class="home-title">GLOBAL DEMONLIST+</h1>
+
+    <p class="home-subtitle">
+      THE ULTIMATE LIST FOR GEOMETRY DASH
+    </p>
+
+    <button class="home-list-btn" onclick="
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      document.querySelector('[data-tab=&quot;demonlist&quot;]').classList.add('active');
+      document.getElementById('demonlist').classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    ">
+      GO TO LIST
+    </button>
+
+  </div>
+
+  <div class="home-bottom">
+
+    <div class="home-panel">
+      <h2>Changelog</h2>
+
+      <div class="home-scroll">
+
+        <p><strong>+</strong> Heliopolis was placed at #1, above Grief.</p>
+        <p><strong>v1.5</strong> Repurposed changelog for list changes.</p>
+
+      </div>
+    </div>
+
+    <div class="home-panel">
+      <h2>Why Use Us?</h2>
+
+      <div class="home-scroll">
+
+        <p>
+          <strong>Basically Almost Every Level</strong><br>
+          We place almost every level with (almost) no rules.
+        </p>
+
+        <p>
+          <strong>EVERY DEMON</strong><br>
+          You can submit every demon, difficulty doesn't matter.
+        </p>
+
+        <p>
+          <strong>Leaderboard</strong><br>
+          I mean, what list doesn't have a leaderboard?
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+    
+<div id="demonlist" class="tab-content">
+  <h1>Demonlist</h1>
+ <div class="list-warning">
+   WARNING: THIS LIST HAS A REALLY SMALL TEAM. IF SOME LEVELS ARE MISSING, PLEASE SEND THEM IN THE DISCORD SERVER.
+ </div>
+
+<div class="list-warning">
+   WARNING: THE SPACEUK METHOD IS ALLOWED ON THIS LIST. DO NOT REPORT PLAYERS FOR USING IT.
+ </div>
+
+  <div class="panel">
+    <input id="search-bar" placeholder="Search demons by name or position">
+
+    <div class="dropdown-row">
+      <div class="dropdown-group">
+        <label>Main List (1–75)</label>
+        <select id="select-main"></select>
+      </div>
+      <div class="dropdown-group">
+        <label>Extended List (76–100)</label>
+        <select id="select-extended"></select>
+      </div>
+      <div class="dropdown-group">
+        <label>Legacy List (101+)</label>
+        <select id="select-legacy"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="subtabs">
+    <button class="subtab-btn active" data-subtab="demons">Demons</button>
+  </div>
+
+  <div id="demons" class="subtab-content active">
+    <div id="demon-container"></div>
+  </div>
+</div>
+
+
+<div id="demon-page" class="tab-content">
+  <div id="demon-page-container"></div>
+</div>
+
+<div id="leaderboard" class="tab-content">
+  <h1>Leaderboard</h1>
+
+  <div class="leaderboard-subtabs">
+    <button class="leaderboard-subtab-btn active" data-lb="main-lb">Main</button>
+  </div>
+
+  <div id="main-lb" class="leaderboard-subtab-content active">
+    <div class="panel">
+      <div class="leaderboard-controls">
+        <input id="player-search" placeholder="Search players">
+        <select id="leaderboard-filter">
+          <option value="points">Most Points</option>
+          <option value="tier">Hardest</option>
+        </select>
+      </div>
+      <div id="leaderboard-container"></div>
+    </div>
+  </div>
+</div>
+
+
+<div id="guidelines" class="tab-content">
+  <h1>Extras</h1>
+  <div class="panel">
+     <a href="https://sites.google.com/view/dlplusstuff/home-page" target="_blank" class="submit-btn">Open Extras</a>
+  </div>
+</div>   
+
+    
+<div id="staff" class="tab-content">
+  <h1>Staff Members</h1>
+  <div class="panel staff-container">
+    <div class="staff-card">
+      <span class="staff-name">TheSilly</span>
+      <span class="staff-role role-owner">Owner</span>
+    </div>
+    <div class="staff-card">
+      <span class="staff-name">Gabri26120</span>
+      <span class="staff-role role-suggestor">List Suggestor</span>
+    </div>
+          <div class="staff-card">
+      <span class="staff-name">BelgioneAranci</span>
+      <span class="staff-role role-suggestor">Mini List Suggestor</span>
+    </div>
+         <div class="staff-card">
+      <span class="staff-name">Squeeg</span>
+      <span class="staff-role role-suggestor">Cool Person</span>
+    </div>
+         <div class="staff-card">
+      <span class="staff-name">Zoink</span>
+      <span class="staff-role role-suggestor">Professional Prepracticer</span>
+    </div>
+  </div>
+</div>
+
+    <div id="rules" class="tab-content">
+  <h1>Rules</h1>
+
+  <div class="panel">
+
+    <p>
+      This contains the rules of the Global Demonlist+. This explains how it accepts records and places levels.
+    </p>
+
+    <div class="list-warning">
+      WARNING: THESE RULES ARE SUBJECT TO CHANGE. IF YOU WANT SOMETHING TO CHANGE, YOU CAN CONTACT THE MODERATORS IN THE SERVER.
+    </div>
+
+    <h2>Acceptance of Records</h2>
+
+    <p>
+      Before you submit a record, you must of course know the rules.
+    </p>
+
+    <ul>
+      <li>Must be posted on YouTube or Medal.</li>
+      <li>Google Drive or private sharing can also be used, but only in extreme cases.</li>
+      <li>If the video is edited, raw footage is required.</li>
+      <li>The sound of clicks must be audible.</li>
+      <li>Clicks must be genuine and not fake sounds.</li>
+      <li>Clicks may be hidden, but raw footage is then required.</li>
+      <li>If using a version lower than 2.209, a cheat indicator must be shown.</li>
+      <li>Alternatively, the cheat indicator may be shown on the endscreen, but the endscreen must be included in the video.</li>
+    </ul>
+
+    <div class="list-warning">
+      WARNING FOR MODERATORS: ANY PRIVATE INFORMATION YOU SEE FROM RAW FOOTAGE IS STRICTLY PROHIBITED FROM BEING SHOWN. IF YOU ARE CAUGHT SAYING ANYTHING PEOPLE SHOULDN'T SEE YOU WILL BE KICKED FROM THE TEAM ON THE SPOT.
+    </div>
+
+    <p>
+      If the proof is insufficient, moderators may require:
+    </p>
+
+    <ul>
+      <li>CPS Counter</li>
+      <li>FPS Counter</li>
+      <li>Clock</li>
+      <li>Handcam</li>
+      <li>Input Overlay</li>
+    </ul>
+
+    <h2>Bans</h2>
+
+    <p>
+      If a player is suspected of cheating, the record will simply be rejected.
+    </p>
+
+    <p>
+      If multiple cheated records are submitted, the player will receive a temporary ban.
+    </p>
+
+    <p>
+      However, if a player is found to have any form of bigotry (such as racism, transphobia, or homophobia), the player will be banned from both the server and the leaderboard.
+    </p>
+
+    <h2>Staff Roles</h2>
+
+    <p><strong>List Leader / Owner</strong><br>
+    The owner of the list.</p>
+
+    <p><strong>List Co-Leader / Co-Owner</strong><br>
+    Self-explanatory.</p>
+
+    <p><strong>List Moderator</strong><br>
+    A moderator of the list. May have no affiliation with the server team and can correct mistakes made by List Helpers.</p>
+
+    <p><strong>List Helper</strong><br>
+    Not a moderator, but can accept or reject records.</p>
+
+    <p><strong>List Suggestor</strong><br>
+    A list admin who has nothing to do with moderation, but can suggest features and improvements.</p>
+
+    <h2>Additional Notes</h2>
+
+    <ul>
+      <li>The SpaceUK Method is allowed on this list.</li>
+      <li>Do not report players solely for using the SpaceUK Method.</li>
+      <li>Staff may request additional proof at any time.</li>
+    </ul>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
